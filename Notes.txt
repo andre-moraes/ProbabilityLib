@@ -1,0 +1,107 @@
+unsigned int should go only up to 23.622.320.128. Function returns like int...
+-> C++: How to print an unsigned character (unsigned byte – uint8_t) using cout 
+-> https://bytefreaks.net/programming-2/c/c-how-to-print-an-unsigned-character-unsigned-byte-uint8_t-using-cout
+
+n = 12 ->       479.001.600   OK				  479.001.600
+n = 13 ->     6.227.020.800 ñ OK 			    1.932.053.504
+n = 14 ->    87.178.291.200 ñ OK 			    1.278.945.280
+n = 15 -> 1.307.674.368.000 ñ OK 				2.004.310.016
+
+unsigned int = long int values from 0 to 4.294.967.295	
+
+----------------------------------------------------------------------------------------------
+
+How to find the decimal value of a float number: http://www.cplusplus.com/reference/cmath/modf/
+
+/* modf example */
+#include <stdio.h>      /* printf */
+#include <math.h>       /* modf */
+
+int main ()
+{
+  double param, fractpart, intpart;
+
+  param = 3.14159265;
+  fractpart = modf (param , &intpart);
+  printf ("%f = %f + %f \n", param, intpart, fractpart);
+  return 0;
+}
+
+----------------------------------------------------------------------------------------------
+
+C++ Data Types
+
+short int           2bytes  -32,768 to 32,767
+signed short int    2bytes  -32,768 to 32,767
+unsigned short int  2bytes  0 to 65,535
+int                 4bytes  -2,147,483,648 to 2,147,483,647
+signed int          4bytes  -2,147,483,648 to 2,147,483,647
+unsigned int        4bytes  0 to 4,294,967,295
+long int            4bytes  -2,147,483,648 to 2,147,483,647
+signed long int     4bytes  -2,147,483,648 to 2,147,483,647
+unsigned long int   4bytes  0 to 4,294,967,295
+float               4bytes  +/- 3.4e +/- 38 (~7 digits)
+double              8bytes  +/- 1.7e +/- 308 (~15 digits)
+long double         8bytes  +/- 1.7e +/- 308 (~15 digits)
+
+https://www.tutorialspoint.com/cplusplus/cpp_data_types.htm
+http://www.cplusplus.com/doc/tutorial/variables/
+
+#include <iostream>
+using namespace std;
+
+int main() {
+   cout << "Size of char : " << sizeof(char) << endl;
+   cout << "Size of int : " << sizeof(int) << endl;
+   cout << "Size of short int : " << sizeof(short int) << endl;
+   cout << "Size of long int : " << sizeof(long int) << endl;
+   cout << "Size of float : " << sizeof(float) << endl;
+   cout << "Size of double : " << sizeof(double) << endl;
+   cout << "Size of wchar_t : " << sizeof(wchar_t) << endl;
+   
+   return 0;
+}
+
+----------------------------------------------------------------------------------------------
+
+int to float 
+
+https://stackoverflow.com/questions/2544394/c-floating-point-to-integer-type-conversions
+
+float f = 3.4;
+int n = static_cast<int>(f);
+
+----------------------------------------------------------------------------------------------
+
+Magnitude one's and two's complement (number representation in binary)
+
+https://www.geeksforgeeks.org/binary-representation-of-a-given-number/
+https://www.youtube.com/watch?v=Z3mswCN2FJs
+https://www.youtube.com/watch?v=Dg6IZQ5uMUc
+https://www.youtube.com/watch?v=lKTsv6iVxV4
+
+#include <bitset>
+...
+bitset<32> x(p);
+cout << "Binary of input: " << p << " -> " << x << endl;
+
+-3 -> 1101, i.e. !!! 2s complement !!! 
+
+1s complement:
+0111 (7)
+1100 (-3) 0011 ... invert
+---------
+0011+1
+0100 (4)
+
+2s complement:
+0011 (3)
+1100 (-3) 1s complement + 1
+1101 (-3) 2s complement
+
+0111 (7)
+1101 (-3)
+---------
+0100 (4)
+
+----------------------------------------------------------------------------------------------

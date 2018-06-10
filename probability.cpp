@@ -14,13 +14,22 @@
  * unsigned integer "i", which is incremented until it's equal to "n". At
  * every interaction "n" is multiplied by the previous value. When "i" is
  * equal to "n" the "factorial" function returns the unsigned integer
- * "factorial". Function also checks if the input is negative, exceeds the
+ * "factorial". PROBLIB_0001_0001/0002_0001
+ *
+ * Function also checks if the input is negative, exceeds the
  * maximum input value (12), overflows the output value, and if input is
  * an integer. If the input check proves true in any case, the function
  * returns 0 and the "status" value, which informs the problems found.
  * Moreover, function also check the output for overflow and in case of
  * error the function returns 0 and the "status" value, which informs the
  * problems found.
+ *
+ * If an float value is addressed to a int and the this int is sent to factorial
+ * function, or if a float value is sent to factorial function and the result is
+ * addressed to an int variable, C++ automatically cast the float value to int and
+ * discard the decimal value. This scenario will not set an error condition warning.
+ * There is no workaround for this scenario and special attention for this limitation
+ * is required.
  */
 unsigned int probability::factorial(int n){
 	unsigned int factorial = 1;
@@ -46,7 +55,9 @@ unsigned int probability::factorial(int n){
  * unsigned long integer "i", which is incremented until it's equal to "n". At
  * every interaction "n" is multiplied by the previous value. When "i" is
  * equal to "n" the "factorial" function returns the unsigned long integer
- * "factorial". Function also checks if the input is negative, exceeds the
+ * "factorial". PROBLIB_0001_0001/0002_0002
+ *
+ * Function also checks if the input is negative, exceeds the
  * maximum input value (170), overflows the output value, and if input is
  * an integer. If the input check proves true in any case, the function
  * returns 0 and the "status" value, which informs the problems found.

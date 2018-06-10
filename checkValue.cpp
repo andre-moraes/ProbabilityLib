@@ -11,6 +11,7 @@
 
 /* Checks if int n value is greater than zero. If not updates the "status" value
  * ORing "status" with "enum validateNumber (@checkValue.h) = negative_number"
+ * PROBLIB_0001_0003_001
  */
 int checkValue::notNegative(int n, int status){
 	if (n < 0) 										status = status | negative_number;
@@ -19,6 +20,7 @@ int checkValue::notNegative(int n, int status){
 
 /* Checks if double n value is greater than zero. If not updates the "status"
  * value ORing "status" with "enum validateNumber (@checkValue.h) = negative_number"
+ * PROBLIB_0001_0003_0002
  */
 int checkValue::notNegative(double n, int status){
 	if (n < 0) 										status = status | negative_number;
@@ -27,7 +29,7 @@ int checkValue::notNegative(double n, int status){
 
 /* Checks if int n value is less or equal the max limit (12). If not updates the
  * "status" value ORing "status" with "enum validateNumber (@checkValue.h) =
- * overMaxLimit_number"
+ * overMaxLimit_number" PROBLIB_0001_0004_0001
  */
 int checkValue::atMaxLimit(int n, int status){
 	if (n > 12) 									status = status | overMaxLimit_number;
@@ -36,7 +38,7 @@ int checkValue::atMaxLimit(int n, int status){
 
 /* Checks if double n value is less or equal the max limit (170). If not updates
  * the "status" value ORing "status" with "enum validateNumber (@checkValue.h) =
- * overMaxLimit_number"
+ * overMaxLimit_number" PROBLIB_0001_0004_0002
  */
 int checkValue::atMaxLimit(double n, int status){
 	if (n > 170) 									status = status | overMaxLimit_number;
@@ -49,7 +51,7 @@ int checkValue::atMaxLimit(double n, int status){
  * equals 0 (default value) checks if the double "factorial" exceeds the maximum
  * output value allowed for double variables (inf). In case the output indicates
  * inf function updates the "status" value ORing "status" with "enum validateNumber
- * (@checkValue.h) = overflow"
+ * (@checkValue.h) = overflow" PROBLIB_0001_0005_0001
  */
 int checkValue::overflowedValue(double factorial, int status, bool isInt){
 	if (isInt == true && factorial > 4294967295) 	status = status | overflow;
@@ -59,7 +61,7 @@ int checkValue::overflowedValue(double factorial, int status, bool isInt){
 
 /* Check if input number is an integer by checking if there is any decimal value using
  * function modf@math.h. If not updates the "status" value ORing "status" with "enum
- * validateNumber (@checkValue.h) = not_integer"
+ * validateNumber (@checkValue.h) = not_integer" PROBLIB_0001_0006_0001
  */
 int checkValue::isInteger(double n, int status){
 	  double intpart;

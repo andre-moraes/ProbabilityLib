@@ -11,21 +11,21 @@
 
 class checkValue {
 	public:
-	/* Check if the input number is not negative and returns updated status (int)
+	/* Check if the input number is not negative and return updated status (int)
 	 */
 	int notNegative(int n, int status);
 	int notNegative(double n, int status);
 
-	/* Check if the input number is on the right max limit and returns updated status (int)
+	/* Check if the input number is on the right max limit and return updated status (int)
 	 */
 	int atMaxLimit(int n, int status);
 	int atMaxLimit(double n, int status);
 
-	/* Check if the output value is overflowed and returns updated status (int)
+	/* Check if the output value is overflowed and return updated status (int)
 	 */
 	int overflowedValue(double factorial, int status, bool isInt = false);
 
-	/* Check if input number is an integer and returns updated status (int)
+	/* Check if input number is an integer and return updated status (int)
 	 */
 	int isInteger(double n, int status);
 

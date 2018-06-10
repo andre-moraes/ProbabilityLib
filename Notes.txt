@@ -105,3 +105,9 @@ cout << "Binary of input: " << p << " -> " << x << endl;
 0100 (4)
 
 ----------------------------------------------------------------------------------------------
+
+List memory content
+
+https://stackoverflow.com/questions/2376915/how-to-print-out-the-memory-contents-of-a-variable-in-c
+
+----------------------------------------------------------------------------------------------

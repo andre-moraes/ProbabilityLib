@@ -12,7 +12,7 @@
 class probability {
 
 	public:
-		unsigned int factorial(unsigned int n); // Receive and return an unsigned int. Max valid input should be 12. Output value should be from 0 to 4.294.967.295
+		unsigned int factorial(int n); 			// Receive and return an unsigned int. Max valid input should be 12. Output value should be from 0 to 4.294.967.295
 		double factorial(double m); 			// Receive and return an double. Max valid input should be 170. Output value should be from 0 to 1.7e+308 (~15 digits)
 		int checkStatus();						// Checks the calculation validity
 

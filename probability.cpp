@@ -9,8 +9,8 @@
 #include "probability.h"
 #include "checkValue.h"
 
-/* Calculates the factorial of the unsigned integer "n". If "n" equals 0
- * the "factorial" function returns 1, otherwise the for loop uses the
+/* Calculates the factorial of the integer "n". If "n" equals 0 the
+ * "factorial" function returns 1, otherwise the for loop uses the
  * unsigned integer "i", which is incremented until it's equal to "n". At
  * every interaction "n" is multiplied by the previous value. When "i" is
  * equal to "n" the "factorial" function returns the unsigned integer
@@ -22,11 +22,11 @@
  * error the function returns 0 and the "status" value, which informs the
  * problems found.
  */
-unsigned int probability::factorial(unsigned int n){
+unsigned int probability::factorial(int n){
 	unsigned int factorial = 1;
 	if (n == 0) return 1;
 	double factorialDouble = 1;
-	for(unsigned int i=1; i<=n; ++i) factorialDouble = factorialDouble * i;
+	for(int i=1; i<=n; ++i) factorialDouble = factorialDouble * i;
 
 	checkValue check;														// checkValue class defined at check
 	status = check.notNegative(n,status);									// Checks if the input is negative

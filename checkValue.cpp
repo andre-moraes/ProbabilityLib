@@ -9,10 +9,10 @@
 #include "checkValue.h"
 #include <math.h>
 
-/* Checks if unsigned int n value is greater than zero. If not updates the "status"
- * value ORing "status" with "enum validateNumber (@checkValue.h) = negative_number"
+/* Checks if int n value is greater than zero. If not updates the "status" value
+ * ORing "status" with "enum validateNumber (@checkValue.h) = negative_number"
  */
-int checkValue::notNegative(unsigned int n, int status){
+int checkValue::notNegative(int n, int status){
 	if (n < 0) 										status = status | negative_number;
 	return status;
 }
@@ -25,11 +25,11 @@ int checkValue::notNegative(double n, int status){
 	return status;
 }
 
-/* Checks if unsigned int n value is less or equal the max limit (12). If not updates
- * the "status" value ORing "status" with "enum validateNumber (@checkValue.h) =
+/* Checks if int n value is less or equal the max limit (12). If not updates the
+ * "status" value ORing "status" with "enum validateNumber (@checkValue.h) =
  * overMaxLimit_number"
  */
-int checkValue::atMaxLimit(unsigned int n, int status){
+int checkValue::atMaxLimit(int n, int status){
 	if (n > 12) 									status = status | overMaxLimit_number;
 	return status;
 }
